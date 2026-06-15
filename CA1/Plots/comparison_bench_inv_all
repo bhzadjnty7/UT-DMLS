@@ -1,0 +1,111 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# --- Benchmark Data for Matrix Inversion ---
+# Data for 10000x10000 matrix
+data_10k_inv = {
+    'OpenBLAS': {
+        'avg_time': 10.4445,
+        'avg_gflops': 255.35,
+        'avg_cpu_usage': 10.2,
+        'avg_error': 3.20e-14
+    },
+    'MKL': {
+        'avg_time': 8.8542,
+        'avg_gflops': 303.00,
+        'avg_cpu_usage': 6.9,
+        'avg_error': 3.62e-14
+    }
+}
+
+# Data for 20000x20000 matrix
+data_20k_inv = {
+    'OpenBLAS': {
+        'avg_time': 85.4035,
+        'avg_gflops': 250.01,
+        'avg_cpu_usage': 9.0,
+        'avg_error': 4.39e-14
+    },
+    'MKL': {
+        'avg_time': 68.9735,
+        'avg_gflops': 309.31,
+        'avg_cpu_usage': 10.8,
+        'avg_error': 4.70e-14
+    }
+}
+
+# BLAS labels and colors for consistency
+labels = list(data_10k_inv.keys()) # ['OpenBLAS', 'MKL']
+colors = ['#1f77b4', '#ff7f0e'] # Blue for OpenBLAS, Orange for MKL
+
+# --- Plot Set 1: Comparison for 10000x10000 Matrix Inversion ---
+fig1, axes1 = plt.subplots(1, 4, figsize=(24, 6))
+fig1.suptitle('BLAS Performance Comparison for 10000x10000 Matrix Inversion', fontsize=16)
+
+# Plot Average Execution Time
+times_10k = [data_10k_inv[lbl]['avg_time'] for lbl in labels]
+bars1 = axes1[0].bar(labels, times_10k, color=colors)
+axes1[0].set_title('Average Execution Time (seconds)')
+axes1[0].set_ylabel('Time (seconds)')
+axes1[0].bar_label(bars1, fmt='%.2f')
+
+# Plot Average GFLOPS Performance
+gflops_10k = [data_10k_inv[lbl]['avg_gflops'] for lbl in labels]
+bars2 = axes1[1].bar(labels, gflops_10k, color=colors)
+axes1[1].set_title('Average Performance (GFLOPS)')
+axes1[1].set_ylabel('GFLOPS')
+axes1[1].bar_label(bars2, fmt='%.2f')
+
+# Plot Average CPU Usage
+cpu_10k = [data_10k_inv[lbl]['avg_cpu_usage'] for lbl in labels]
+bars3 = axes1[2].bar(labels, cpu_10k, color=colors)
+axes1[2].set_title('Average CPU Usage (%)')
+axes1[2].set_ylabel('CPU Usage (%)')
+axes1[2].bar_label(bars3, fmt='%.1f%%')
+
+# Plot Verification Error
+error_10k = [data_10k_inv[lbl]['avg_error'] for lbl in labels]
+bars4 = axes1[3].bar(labels, error_10k, color=colors)
+axes1[3].set_title('Average Verification Error')
+axes1[3].set_ylabel('Frobenius Norm Error')
+axes1[3].bar_label(bars4, fmt='%.2e')
+
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+plt.savefig('benchmark_inv_10k_comparison.png')
+plt.show()
+
+# --- Plot Set 2: Comparison for 20000x20000 Matrix Inversion ---
+fig2, axes2 = plt.subplots(1, 4, figsize=(24, 6))
+fig2.suptitle('BLAS Performance Comparison for 20000x20000 Matrix Inversion', fontsize=16)
+
+# Plot Average Execution Time
+times_20k = [data_20k_inv[lbl]['avg_time'] for lbl in labels]
+bars1 = axes2[0].bar(labels, times_20k, color=colors)
+axes2[0].set_title('Average Execution Time (seconds)')
+axes2[0].set_ylabel('Time (seconds)')
+axes2[0].bar_label(bars1, fmt='%.2f')
+
+# Plot Average GFLOPS Performance
+gflops_20k = [data_20k_inv[lbl]['avg_gflops'] for lbl in labels]
+bars2 = axes2[1].bar(labels, gflops_20k, color=colors)
+axes2[1].set_title('Average Performance (GFLOPS)')
+axes2[1].set_ylabel('GFLOPS')
+axes2[1].bar_label(bars2, fmt='%.2f')
+
+# Plot Average CPU Usage
+cpu_20k = [data_20k_inv[lbl]['avg_cpu_usage'] for lbl in labels]
+bars3 = axes2[2].bar(labels, cpu_20k, color=colors)
+axes2[2].set_title('Average CPU Usage (%)')
+axes2[2].set_ylabel('CPU Usage (%)')
+axes2[2].bar_label(bars3, fmt='%.1f%%')
+
+# Plot Verification Error
+error_20k = [data_20k_inv[lbl]['avg_error'] for lbl in labels]
+bars4 = axes2[3].bar(labels, error_20k, color=colors)
+axes2[3].set_title('Average Verification Error')
+axes2[3].set_ylabel('Frobenius Norm Error')
+axes2[3].bar_label(bars4, fmt='%.2e')
+
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+plt.savefig('benchmark_inv_20k_comparison.png')
+plt.show()

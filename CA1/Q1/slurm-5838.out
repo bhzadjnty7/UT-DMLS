@@ -1,0 +1,18 @@
+Starting parallel computation (Cyclic Distribution)
+Number of processes: 4
+Number of terms: 500000
+--------------------------------------------------
+
+Estimated π value: 3.1415907437
+Actual π value:    3.1415926536
+Error:             0.0000019099
+
+Timing Information:
+Total execution time: 5.5928 seconds
+
+Per-process execution times:
+  Process 0: 5.5445 seconds
+  Process 1: 5.5483 seconds
+  Process 2: 5.5896 seconds
+  Process 3: 5.5553 seconds
+--------------------------------------------------

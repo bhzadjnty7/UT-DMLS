@@ -1,0 +1,76 @@
+==========================================
+Federated Learning - Scenario 1
+1 Communication Round, 10 Local Epochs
+==========================================
+Job ID: 6264
+Nodes: 2
+Tasks: 4
+Start: Wed Nov  5 06:00:34 PM +0330 2025
+==========================================
+
+
+CLIENT 1: Initializing...
+CLIENT 1: Data loaded successfully
+CLIENT 1: Train samples: 26667, Test samples: 6666
+CLIENT 1: Features: 50
+CLIENT 1: Train class distribution: [25314  1353]
+CLIENT 1: Round 1/1 - Trained for 10 epoch(s) in 0.1628s
+CLIENT 1: Total local training time: 0.1628 seconds
+CLIENT 1: Final test accuracy: 0.5977 (59.77%)
+
+CLIENT 2: Initializing...
+CLIENT 2: Data loaded successfully
+CLIENT 2: Train samples: 26666, Test samples: 6666
+CLIENT 2: Features: 50
+CLIENT 2: Train class distribution: [ 1323 25343]
+CLIENT 2: Round 1/1 - Trained for 10 epoch(s) in 0.5003s
+CLIENT 2: Total local training time: 0.5003 seconds
+CLIENT 2: Final test accuracy: 0.6541 (65.41%)
+======================================================================
+SERVER: Federated Learning Started (FedAvg)
+======================================================================
+Number of clients: 3
+Communication rounds: 1
+Local epochs per round: 10
+Number of features: 50
+======================================================================
+
+======================================================================
+Communication Round 1/1
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 1 completed in 26.1051s
+
+======================================================================
+SERVER: Training completed
+Total training time: 26.1051 seconds
+======================================================================
+
+SERVER: Sent final model to all clients for evaluation
+SERVER: Client 1 test accuracy: 0.5977 (59.77%)
+SERVER: Client 2 test accuracy: 0.6541 (65.41%)
+SERVER: Client 3 test accuracy: 0.6216 (62.16%)
+
+======================================================================
+FINAL RESULTS
+======================================================================
+Average test accuracy across all clients: 0.6244 (62.44%)
+Total training time: 26.1051 seconds
+======================================================================
+
+Total execution time: 26.4442 seconds
+
+CLIENT 3: Initializing...
+CLIENT 3: Data loaded successfully
+CLIENT 3: Train samples: 26668, Test samples: 6667
+CLIENT 3: Features: 50
+CLIENT 3: Train class distribution: [13452 13216]
+CLIENT 3: Round 1/1 - Trained for 10 epoch(s) in 2.3699s
+CLIENT 3: Total local training time: 2.3699 seconds
+CLIENT 3: Final test accuracy: 0.6216 (62.16%)
+
+==========================================
+End: Wed Nov  5 06:01:06 PM +0330 2025
+==========================================

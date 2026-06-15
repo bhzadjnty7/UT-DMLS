@@ -1,0 +1,16 @@
+Starting parallel computation (Block Distribution)
+Number of processes: 2
+Number of terms: 500000
+--------------------------------------------------
+
+Estimated π value: 3.1415907437
+Actual π value:    3.1415926536
+Error:             0.0000019099
+
+Timing Information:
+Total execution time: 17.2639 seconds
+
+Per-process execution times:
+  Process 0: 5.2119 seconds
+  Process 1: 17.2633 seconds
+--------------------------------------------------

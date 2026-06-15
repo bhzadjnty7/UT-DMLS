@@ -1,0 +1,175 @@
+==========================================
+Federated Learning - Malicious Client
+10 Rounds, 1 Epoch, Client 2 LR=0.5
+==========================================
+Job ID: 5922
+Start: Thu Oct 30 05:36:37 PM +0330 2025
+==========================================
+
+
+CLIENT 1: Initializing...
+CLIENT 1: Data loaded successfully
+CLIENT 1: Train samples: 26667, Test samples: 6666
+CLIENT 1: Learning rate: 0.01
+CLIENT 1: Train class distribution: [25314  1353]
+CLIENT 1: Round 1/10 - Trained for 1 epoch(s) in 0.0156s
+CLIENT 1: Round 2/10 - Trained for 1 epoch(s) in 0.0118s
+CLIENT 1: Round 3/10 - Trained for 1 epoch(s) in 0.0145s
+CLIENT 1: Round 4/10 - Trained for 1 epoch(s) in 0.0169s
+CLIENT 1: Round 5/10 - Trained for 1 epoch(s) in 0.0117s
+CLIENT 1: Round 6/10 - Trained for 1 epoch(s) in 0.0153s
+CLIENT 1: Round 7/10 - Trained for 1 epoch(s) in 0.0135s
+CLIENT 1: Round 8/10 - Trained for 1 epoch(s) in 0.0129s
+CLIENT 1: Round 9/10 - Trained for 1 epoch(s) in 0.0122s
+CLIENT 1: Round 10/10 - Trained for 1 epoch(s) in 0.0158s
+CLIENT 1: Total local training time: 0.1402 seconds
+CLIENT 1: Final test accuracy: 0.5284 (52.84%)
+======================================================================
+SERVER: Federated Learning with Malicious Client
+======================================================================
+Number of clients: 3
+Communication rounds: 10
+Local epochs per round: 1
+⚠️  WARNING: Client 2 has malicious learning rate (0.5)
+======================================================================
+
+======================================================================
+Communication Round 1/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 1 completed in 20.2039s
+
+======================================================================
+Communication Round 2/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 2 completed in 0.7894s
+
+======================================================================
+Communication Round 3/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 3 completed in 0.5966s
+
+======================================================================
+Communication Round 4/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 4 completed in 0.0408s
+
+======================================================================
+Communication Round 5/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 5 completed in 0.0284s
+
+======================================================================
+Communication Round 6/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 6 completed in 0.0318s
+
+======================================================================
+Communication Round 7/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 7 completed in 0.0293s
+
+======================================================================
+Communication Round 8/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 8 completed in 0.0288s
+
+======================================================================
+Communication Round 9/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 9 completed in 0.0300s
+
+======================================================================
+Communication Round 10/10
+======================================================================
+SERVER: Sent global model to 3 clients
+SERVER: Received updated models from 3 clients
+SERVER: Aggregated models using FedAvg
+SERVER: Round 10 completed in 0.0338s
+
+======================================================================
+SERVER: Training completed
+Total training time: 21.8127 seconds
+======================================================================
+
+SERVER: Sent final model to all clients for evaluation
+SERVER: Client 1 test accuracy: 0.5284 (52.84%)
+SERVER: ⚠️ Client 2 test accuracy: 0.6881 (68.81%)
+SERVER: Client 3 test accuracy: 0.6015 (60.15%)
+
+======================================================================
+FINAL RESULTS (WITH MALICIOUS CLIENT)
+======================================================================
+Average test accuracy: 0.6060 (60.60%)
+Total training time: 21.8127 seconds
+======================================================================
+
+Total execution time: 23.0333 seconds
+
+CLIENT 3: Initializing...
+CLIENT 3: Data loaded successfully
+CLIENT 3: Train samples: 26668, Test samples: 6667
+CLIENT 3: Learning rate: 0.01
+CLIENT 3: Train class distribution: [13452 13216]
+CLIENT 3: Round 1/10 - Trained for 1 epoch(s) in 1.2898s
+CLIENT 3: Round 2/10 - Trained for 1 epoch(s) in 0.6131s
+CLIENT 3: Round 3/10 - Trained for 1 epoch(s) in 0.0130s
+CLIENT 3: Round 4/10 - Trained for 1 epoch(s) in 0.0201s
+CLIENT 3: Round 5/10 - Trained for 1 epoch(s) in 0.0216s
+CLIENT 3: Round 6/10 - Trained for 1 epoch(s) in 0.0151s
+CLIENT 3: Round 7/10 - Trained for 1 epoch(s) in 0.0127s
+CLIENT 3: Round 8/10 - Trained for 1 epoch(s) in 0.0205s
+CLIENT 3: Round 9/10 - Trained for 1 epoch(s) in 0.0136s
+CLIENT 3: Round 10/10 - Trained for 1 epoch(s) in 0.0130s
+CLIENT 3: Total local training time: 2.0324 seconds
+CLIENT 3: Final test accuracy: 0.6015 (60.15%)
+
+⚠️  CLIENT 2: MALICIOUS - Using learning rate 0.5
+
+CLIENT 2: Initializing...
+CLIENT 2: Data loaded successfully
+CLIENT 2: Train samples: 26666, Test samples: 6666
+CLIENT 2: Learning rate: 0.5
+CLIENT 2: Train class distribution: [ 1323 25343]
+⚠️ CLIENT 2: Round 1/10 - Trained for 1 epoch(s) in 0.3234s
+⚠️ CLIENT 2: Round 2/10 - Trained for 1 epoch(s) in 0.0140s
+⚠️ CLIENT 2: Round 3/10 - Trained for 1 epoch(s) in 0.3132s
+⚠️ CLIENT 2: Round 4/10 - Trained for 1 epoch(s) in 0.0271s
+⚠️ CLIENT 2: Round 5/10 - Trained for 1 epoch(s) in 0.0202s
+⚠️ CLIENT 2: Round 6/10 - Trained for 1 epoch(s) in 0.0213s
+⚠️ CLIENT 2: Round 7/10 - Trained for 1 epoch(s) in 0.0262s
+⚠️ CLIENT 2: Round 8/10 - Trained for 1 epoch(s) in 0.0269s
+⚠️ CLIENT 2: Round 9/10 - Trained for 1 epoch(s) in 0.0227s
+⚠️ CLIENT 2: Round 10/10 - Trained for 1 epoch(s) in 0.0247s
+CLIENT 2: Total local training time: 0.8198 seconds
+⚠️ CLIENT 2: Final test accuracy: 0.6881 (68.81%)
+
+==========================================
+End: Thu Oct 30 05:37:06 PM +0330 2025
+==========================================
