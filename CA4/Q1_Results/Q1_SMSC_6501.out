@@ -1,0 +1,68 @@
+==============================================
+Job: Single Machine, Single Core (SMSC)
+==============================================
+Nodelist:=  raspberrypi-dml0
+Number of nodes:=  1
+Ntasks per node:=  1
+==============================================
+MASTER_ADDR:MASTER_PORT=raspberrypi-dml0:27420
+==============================================
+Starting training...
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Rank 0] Initialized: world_size=1, local_rank=0
+============================================================
+Distributed Training Configuration
+============================================================
+World size: 1
+Physical batch size: 32
+Accumulation steps: 4
+Effective batch size: 128
+Gradient accumulation: Enabled
+Learning rate: 0.001
+Epochs: 20
+============================================================
+[Dataset] Loaded features shape: (60000, 512)
+[Dataset] Loaded labels shape: (60000,)
+[Dataset] Number of classes: 20
+[Dataset] Loaded features shape: (10000, 512)
+[Dataset] Loaded labels shape: (10000,)
+[Dataset] Number of classes: 20
+Input dimension: 512
+Number of classes: 20
+Training samples: 60000
+Test samples: 10000
+
+Starting training...
+------------------------------------------------------------
+Epoch [1/20] Train Loss: 1.3658 | Train Acc: 59.85% | Test Loss: 0.5037 | Test Acc: 84.70% | Time: 63.52s
+[Rank 0] Checkpoint saved to checkpoints/model_SMSC.pt
+Epoch [2/20] Train Loss: 0.6332 | Train Acc: 80.61% | Test Loss: 0.4683 | Test Acc: 85.36% | Time: 62.17s
+[Rank 0] Checkpoint saved to checkpoints/model_SMSC.pt
+Epoch [3/20] Train Loss: 0.5336 | Train Acc: 83.49% | Test Loss: 0.4603 | Test Acc: 85.51% | Time: 62.12s
+[Rank 0] Checkpoint saved to checkpoints/model_SMSC.pt
+Epoch [4/20] Train Loss: 0.4757 | Train Acc: 85.07% | Test Loss: 0.4662 | Test Acc: 85.64% | Time: 62.07s
+[Rank 0] Checkpoint saved to checkpoints/model_SMSC.pt
+Epoch [5/20] Train Loss: 0.4346 | Train Acc: 86.20% | Test Loss: 0.4728 | Test Acc: 85.36% | Time: 62.09s
+Epoch [6/20] Train Loss: 0.3943 | Train Acc: 87.39% | Test Loss: 0.4793 | Test Acc: 85.40% | Time: 62.12s
+Epoch [7/20] Train Loss: 0.3659 | Train Acc: 88.19% | Test Loss: 0.4851 | Test Acc: 85.45% | Time: 62.13s
+Epoch [8/20] Train Loss: 0.3319 | Train Acc: 89.16% | Test Loss: 0.4956 | Test Acc: 84.91% | Time: 62.18s
+Epoch [9/20] Train Loss: 0.2723 | Train Acc: 91.14% | Test Loss: 0.4879 | Test Acc: 85.40% | Time: 62.44s
+Epoch [10/20] Train Loss: 0.2387 | Train Acc: 92.07% | Test Loss: 0.4990 | Test Acc: 85.15% | Time: 62.09s
+Epoch [11/20] Train Loss: 0.2257 | Train Acc: 92.59% | Test Loss: 0.5069 | Test Acc: 85.38% | Time: 62.14s
+Epoch [12/20] Train Loss: 0.2152 | Train Acc: 92.98% | Test Loss: 0.5173 | Test Acc: 85.26% | Time: 62.18s
+Epoch [13/20] Train Loss: 0.1870 | Train Acc: 93.77% | Test Loss: 0.5135 | Test Acc: 85.42% | Time: 62.12s
+Epoch [14/20] Train Loss: 0.1727 | Train Acc: 94.30% | Test Loss: 0.5194 | Test Acc: 85.37% | Time: 62.08s
+Epoch [15/20] Train Loss: 0.1648 | Train Acc: 94.53% | Test Loss: 0.5283 | Test Acc: 85.41% | Time: 62.13s
+Epoch [16/20] Train Loss: 0.1587 | Train Acc: 94.74% | Test Loss: 0.5351 | Test Acc: 85.29% | Time: 62.09s
+Epoch [17/20] Train Loss: 0.1455 | Train Acc: 95.17% | Test Loss: 0.5308 | Test Acc: 85.45% | Time: 62.15s
+Epoch [18/20] Train Loss: 0.1428 | Train Acc: 95.24% | Test Loss: 0.5357 | Test Acc: 85.11% | Time: 62.12s
+Epoch [19/20] Train Loss: 0.1382 | Train Acc: 95.39% | Test Loss: 0.5389 | Test Acc: 85.20% | Time: 62.19s
+Epoch [20/20] Train Loss: 0.1328 | Train Acc: 95.60% | Test Loss: 0.5407 | Test Acc: 85.27% | Time: 62.10s
+------------------------------------------------------------
+Training completed!
+Total training time: 1244.78s
+Best test accuracy: 85.64%
+============================================================
+==============================================
+Training completed!
+==============================================

@@ -1,0 +1,91 @@
+==============================================
+Job: MMMC WITHOUT Gradient Accumulation
+==============================================
+Nodelist:=  raspberrypi-dml[0,3]
+Number of nodes:=  2
+Ntasks per node:=  1
+==============================================
+MASTER_ADDR:MASTER_PORT=raspberrypi-dml0:27424
+==============================================
+Starting training (NO gradient accumulation)...
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Rank 2] Initialized: world_size=4, local_rank=0
+[Rank 0] Initialized: world_size=4, local_rank=0
+============================================================
+Distributed Training Configuration
+============================================================
+World size: 4
+Physical batch size: 128
+Accumulation steps: N/A
+Effective batch size: 128
+Gradient accumulation: Disabled
+Learning rate: 0.001
+Epochs: 20
+============================================================
+[Rank 1] Initialized: world_size=4, local_rank=1
+[Rank 3] Initialized: world_size=4, local_rank=1
+[Dataset] Loaded features shape: (60000, 512)
+[Dataset] Loaded labels shape: (60000,)
+[Dataset] Loaded features shape: (60000, 512)
+[Dataset] Loaded labels shape: (60000,)
+[Dataset] Number of classes: 20
+[Dataset] Number of classes: 20
+[Dataset] Loaded features shape: (10000, 512)
+[Dataset] Loaded labels shape: (10000,)
+[Dataset] Number of classes: 20
+Input dimension: 512
+Number of classes: 20
+Training samples: 60000
+Test samples: 10000
+[Dataset] Loaded features shape: (10000, 512)
+[Dataset] Loaded labels shape: (10000,)
+[Dataset] Number of classes: 20
+[Dataset] Loaded features shape: (60000, 512)
+[Dataset] Loaded labels shape: (60000,)
+[Dataset] Loaded features shape: (60000, 512)
+[Dataset] Loaded labels shape: (60000,)
+[Dataset] Number of classes: 20[Dataset] Number of classes: 20
+
+[Dataset] Loaded features shape: (10000, 512)
+[Dataset] Loaded labels shape: (10000,)
+[Dataset] Number of classes: 20
+[Dataset] Loaded features shape: (10000, 512)
+[Dataset] Loaded labels shape: (10000,)
+[Dataset] Number of classes: 20
+
+Starting training...
+------------------------------------------------------------
+Epoch [1/20] Train Loss: 1.8311 | Train Acc: 46.86% | Test Loss: 0.6596 | Test Acc: 82.54% | Time: 28.33s
+[Rank 0] Checkpoint saved to checkpoints/model_MMMC_no_accum.pt
+Epoch [2/20] Train Loss: 0.6704 | Train Acc: 80.34% | Test Loss: 0.4700 | Test Acc: 85.48% | Time: 28.19s
+[Rank 0] Checkpoint saved to checkpoints/model_MMMC_no_accum.pt
+Epoch [3/20] Train Loss: 0.5049 | Train Acc: 84.61% | Test Loss: 0.4426 | Test Acc: 86.39% | Time: 28.16s
+[Rank 0] Checkpoint saved to checkpoints/model_MMMC_no_accum.pt
+Epoch [4/20] Train Loss: 0.4303 | Train Acc: 86.57% | Test Loss: 0.4447 | Test Acc: 86.18% | Time: 27.99s
+Epoch [5/20] Train Loss: 0.3753 | Train Acc: 88.20% | Test Loss: 0.4540 | Test Acc: 86.10% | Time: 28.20s
+Epoch [6/20] Train Loss: 0.3390 | Train Acc: 89.17% | Test Loss: 0.4603 | Test Acc: 85.80% | Time: 28.18s
+Epoch [7/20] Train Loss: 0.3053 | Train Acc: 90.31% | Test Loss: 0.4666 | Test Acc: 85.89% | Time: 28.21s
+Epoch [8/20] Train Loss: 0.2563 | Train Acc: 91.79% | Test Loss: 0.4694 | Test Acc: 85.79% | Time: 28.22s
+Epoch [9/20] Train Loss: 0.2387 | Train Acc: 92.34% | Test Loss: 0.4787 | Test Acc: 85.77% | Time: 28.23s
+Epoch [10/20] Train Loss: 0.2165 | Train Acc: 92.96% | Test Loss: 0.4836 | Test Acc: 85.68% | Time: 28.34s
+Epoch [11/20] Train Loss: 0.2044 | Train Acc: 93.42% | Test Loss: 0.4977 | Test Acc: 85.71% | Time: 28.22s
+Epoch [12/20] Train Loss: 0.1878 | Train Acc: 93.94% | Test Loss: 0.4953 | Test Acc: 85.77% | Time: 28.27s
+Epoch [13/20] Train Loss: 0.1773 | Train Acc: 94.23% | Test Loss: 0.5107 | Test Acc: 85.84% | Time: 28.24s
+Epoch [14/20] Train Loss: 0.1651 | Train Acc: 94.71% | Test Loss: 0.5129 | Test Acc: 85.58% | Time: 28.22s
+Epoch [15/20] Train Loss: 0.1563 | Train Acc: 94.89% | Test Loss: 0.5146 | Test Acc: 85.78% | Time: 28.21s
+Epoch [16/20] Train Loss: 0.1509 | Train Acc: 95.19% | Test Loss: 0.5230 | Test Acc: 85.48% | Time: 28.17s
+Epoch [17/20] Train Loss: 0.1437 | Train Acc: 95.32% | Test Loss: 0.5245 | Test Acc: 85.50% | Time: 28.22s
+Epoch [18/20] Train Loss: 0.1350 | Train Acc: 95.66% | Test Loss: 0.5284 | Test Acc: 85.45% | Time: 28.26s
+Epoch [19/20] Train Loss: 0.1287 | Train Acc: 95.83% | Test Loss: 0.5237 | Test Acc: 85.68% | Time: 28.15s
+Epoch [20/20] Train Loss: 0.1313 | Train Acc: 95.72% | Test Loss: 0.5280 | Test Acc: 85.74% | Time: 28.12s
+------------------------------------------------------------
+Training completed!
+Total training time: 580.59s
+Best test accuracy: 86.39%
+============================================================
+==============================================
+Training completed!
+==============================================

@@ -1,0 +1,59 @@
+==============================================
+Job: Q2 - Single Machine, Single Core (SMSC)
+Using: HuggingFace Accelerate
+==============================================
+Nodelist:=  raspberrypi-dml0
+Number of nodes:=  1
+Ntasks per node:=  1
+==============================================
+Starting training...
+==============================================
+============================================================
+Distributed Training with HuggingFace Accelerate
+============================================================
+Number of processes: 1
+Physical batch size: 32
+Accumulation steps: 4
+Effective batch size: 128
+Learning rate: 0.001
+Epochs: 20
+Device: cpu
+============================================================
+Input dimension: 512
+Number of classes: 20
+Training samples: 60000
+Test samples: 10000
+
+Starting training...
+------------------------------------------------------------
+Epoch [1/20] Train Loss: 1.3737 | Train Acc: 59.61% | Test Loss: 0.5052 | Test Acc: 84.97% | Time: 60.44s
+  -> New best model saved! Accuracy: 84.97%
+Epoch [2/20] Train Loss: 0.6342 | Train Acc: 80.62% | Test Loss: 0.4722 | Test Acc: 85.45% | Time: 60.19s
+  -> New best model saved! Accuracy: 85.45%
+Epoch [3/20] Train Loss: 0.5369 | Train Acc: 83.28% | Test Loss: 0.4629 | Test Acc: 85.66% | Time: 60.20s
+  -> New best model saved! Accuracy: 85.66%
+Epoch [4/20] Train Loss: 0.4818 | Train Acc: 85.03% | Test Loss: 0.4651 | Test Acc: 85.55% | Time: 60.16s
+Epoch [5/20] Train Loss: 0.4293 | Train Acc: 86.43% | Test Loss: 0.4664 | Test Acc: 85.36% | Time: 60.18s
+Epoch [6/20] Train Loss: 0.3945 | Train Acc: 87.51% | Test Loss: 0.4736 | Test Acc: 84.83% | Time: 60.19s
+Epoch [7/20] Train Loss: 0.3626 | Train Acc: 88.31% | Test Loss: 0.4876 | Test Acc: 85.06% | Time: 60.14s
+Epoch [8/20] Train Loss: 0.2930 | Train Acc: 90.51% | Test Loss: 0.4767 | Test Acc: 85.34% | Time: 60.14s
+Epoch [9/20] Train Loss: 0.2609 | Train Acc: 91.45% | Test Loss: 0.4859 | Test Acc: 85.23% | Time: 60.15s
+Epoch [10/20] Train Loss: 0.2408 | Train Acc: 92.18% | Test Loss: 0.4974 | Test Acc: 85.33% | Time: 60.14s
+Epoch [11/20] Train Loss: 0.2302 | Train Acc: 92.32% | Test Loss: 0.5051 | Test Acc: 85.29% | Time: 60.05s
+Epoch [12/20] Train Loss: 0.2013 | Train Acc: 93.19% | Test Loss: 0.5018 | Test Acc: 85.43% | Time: 60.15s
+Epoch [13/20] Train Loss: 0.1912 | Train Acc: 93.70% | Test Loss: 0.5097 | Test Acc: 85.30% | Time: 60.15s
+Epoch [14/20] Train Loss: 0.1818 | Train Acc: 93.92% | Test Loss: 0.5196 | Test Acc: 85.08% | Time: 60.12s
+Epoch [15/20] Train Loss: 0.1712 | Train Acc: 94.33% | Test Loss: 0.5261 | Test Acc: 85.41% | Time: 60.13s
+Epoch [16/20] Train Loss: 0.1572 | Train Acc: 94.88% | Test Loss: 0.5185 | Test Acc: 85.10% | Time: 60.17s
+Epoch [17/20] Train Loss: 0.1519 | Train Acc: 94.87% | Test Loss: 0.5223 | Test Acc: 85.14% | Time: 60.61s
+Epoch [18/20] Train Loss: 0.1477 | Train Acc: 95.09% | Test Loss: 0.5223 | Test Acc: 85.20% | Time: 60.83s
+Epoch [19/20] Train Loss: 0.1437 | Train Acc: 95.20% | Test Loss: 0.5309 | Test Acc: 85.00% | Time: 60.75s
+Epoch [20/20] Train Loss: 0.1395 | Train Acc: 95.34% | Test Loss: 0.5334 | Test Acc: 85.11% | Time: 60.72s
+------------------------------------------------------------
+Training completed!
+Total training time: 1205.73s
+Best test accuracy: 85.66%
+============================================================
+==============================================
+Training completed!
+==============================================
