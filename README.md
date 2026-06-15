@@ -172,3 +172,6 @@ A dedicated profiling section was also developed to analyze computational bottle
 
 This repository is intended for educational, research, and learning purposes and showcases practical implementations of distributed machine learning algorithms and scalable AI infrastructures.
 
+## ⭐️ Support
+
+If you find this repository useful, consider giving it a ⭐️
